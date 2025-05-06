@@ -1,0 +1,157 @@
+footer
+{
+    background-color:rgb(122,12,12) ;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    font-size: 32px;
+    width: 100%;
+}
+a
+{
+    margin: 20px;
+    color: antiquewhite;
+    font-size: 25px;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited 
+{
+    color: antiquewhite;
+    background-color: transparent;
+    text-decoration: none;
+}
+body
+{
+    background-color: antiquewhite;
+    justify-items: center;
+}
+#navbar
+{
+    display: flex;
+    flex-direction: row;
+    background: rgb(122, 12, 12);
+    width: 100vw;
+}
+#midcontop
+{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    width: 100vw;
+    background-color: brown;
+}
+#lowcontop
+{
+    justify-items: center;
+    padding-top: 150px;
+    justify-content: center;
+    align-items: center;
+    width: 1050px;
+}
+#logo1
+{
+    padding-top: 10px;
+    height: 100px;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+#containerPar1
+{
+    display: flex;
+    align-items: center;
+}
+#placehold1
+{
+    height: 361px;
+    margin-left: 50px;
+}
+#placehold2
+{
+    height: 300px;
+}
+#lowerarea
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#lowerpar
+{
+    font-size: 24px;
+}
+#BottomCon
+{
+    display: flex;
+}
+.midH
+{
+    width: 60vw;
+}
+.par4
+{
+    padding: 40px;
+}
+.vl {
+    border-left: 6px solid rgb(0, 0, 0);
+    height: 700px;
+  }
+.par3
+{
+    width: 600px;
+    margin-left: 60px;
+    font-size: 16px;
+}
+.logo-container
+{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.site-title
+{
+    color: antiquewhite;
+    font-size: 45px;
+}
+.nav-menu
+{
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    padding-left: 600px;
+}
+.Abouthead
+{
+    font-size: 64px;
+}
+.par1
+{
+    width: 500px;
+    font-size: 20px;
+}
+.midcon
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.par2
+{
+    background-color: rgb(255, 255, 255);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 60vw;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 20px;
+}
