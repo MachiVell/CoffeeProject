@@ -144,7 +144,10 @@ html, body {
     justify-content: center; 
     align-items: center;
   }
-  
+  .FreqAskQ
+  {
+    margin-left: 2vw;
+  }
   .faq-image img {
     width: 400px;
     height: auto; 
