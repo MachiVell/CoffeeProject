@@ -1,5 +1,7 @@
 html, body {
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -87,8 +89,7 @@ img {
 .catalog-title {
 
   background-color: #FEF1DE;     
-  width: 100%;                   
-  max-width: 1440px;           
+  width: 100vw;
   height: 95px;              
   margin: 40px 0 auto;               
   
@@ -177,6 +178,7 @@ img {
     padding: 1rem;
     background-color: #7A0C0C;
     color: #FEF1DE;
+    max-height: 100vh;
   }
 
 @media (max-width: 768px) {
