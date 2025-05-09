@@ -6,11 +6,9 @@
   <title>Coffee For Peace</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-  
+
 </head>
 <body>
-
-  <!-- HEADER SECTION -->
 
   <header class="main-header">
     <div class="logo-container">
@@ -27,9 +25,6 @@
     </nav>
   </header>
 
-
-    <!-- HERO SECTION -->
-
   <section class="hero" id="hero">
     <img src="group-photo.png" alt="Group Photo" class="hero-img" />
     <h2 class="hero-title">Welcome To Coffee For Peace!</h2>
@@ -39,11 +34,7 @@
     <a href="catalog.html" class="catalog-button">Catalog</a>
   </section>
 
-  <!-- ABOUT TITLE -->
-
 <h2 class="about-title" id="about-title">About Us</h2>
-
-<!-- ABOUT SECTION -->
 
 <section class="about" id="about">
   <p>
@@ -53,96 +44,75 @@
   <a href="learn-more.html" class="learn-btn">Learn More</a>
 </section>
 
-
-<!-- SERVICES SECTION -->
-
 <section class="services" id="services">
   <h2>Our Services</h2>
   <div class="service-cards">
     <div class="card">
-      Coffee For Peace Cafés<br>
-      <small>Experience our mission in every cup brewed at our cafés.</small>
+      <strong class="service-title">Coffee For Peace Cafés</strong><br>
+      <small class="service-desc">Experience our mission in every cup brewed at our cafés.</small>
     </div>
     <div class="card">
-      Kapeyapaan Roasting<br>
-      <small>Centralized roasting for quality and consistency.</small>
+      <strong class="service-title">Kapeyapaan Roasting</strong><br>
+      <small class="service-desc">Centralized roasting for quality and consistency.</small>
     </div>
     <div class="card">
-      Malipayon Facility<br>
-      <small>Where we process beans and train farmers at Mt. Apo.</small>
+      <strong class="service-title">Malipayon Facility</strong><br>
+      <small class="service-desc">Where we process beans and train farmers at Mt. Apo.</small>
     </div>
     <div class="card">
-      Mobile Coffee Cart<br>
-      <small>Bring our baristas to your event. Rent our mobile cart.</small>
+      <strong class="service-title">Mobile Coffee Cart</strong><br>
+      <small class="service-desc">Bring our baristas to your event. Rent our mobile cart.</small>
     </div>
   </div>
+  
   <button class="order-btn" id="orderBtn">Order Now</button>
 </section>
-
-<!-- ORDER FORM MODAL FOR SERVICES -->
 
 <div class="order-modal hidden" id="orderModal">
   <div class="order-form-container">
     <h3>Place Your Order</h3>
     <form id="orderForm">
 
+<label for="product">Select Product:</label>
+<select id="product" required>
+  <option value="" disabled selected>Select a product</option>
+  <option value="marilog-natural" data-price="305">Marilog Natural - Dark Roast (₱305)</option>
+  <option value="calinan-robusta" data-price="305">Calinan Robusta - Dark Roast (₱305)</option>
+  <option value="amai-washed" data-price="405">Amai Manabilang - Washed Medium Dark Roast (₱405)</option>
+  <option value="mtapo-natural" data-price="405">Mt. Apo Natural - Medium Roast (₱405)</option>
+  <option value="amai-honey" data-price="405">Amai Manabilang - Honey Medium Roast (₱405)</option>
+  <option value="mtapo-honey" data-price="405">Mt. Apo Honey - Light Roast (₱405)</option>
+</select>
 
-      <!-- PRODUCT SELECTION -->
+<label for="payment">Payment Method:</label>
+<select id="payment" required>
+  <option value="" disabled selected>Select payment method</option>
+  <option value="cash">Cash</option>
+  <option value="credit">Credit Card</option>
+</select>
 
-      <label for="product">Select Product:</label>
-      <select id="product" required>
-        <option value="" disabled selected>Select a product</option>
-        <option value="marilog-natural">Marilog Natural - Dark Roast (₱305)</option>
-        <option value="calinan-robusta">Calinan Robusta - Dark Roast (₱305)</option>
-        <option value="amai-washed">Amai Manabilang - Washed Medium Dark Roast (₱405)</option>
-        <option value="mtapo-natural">Mt. Apo Natural - Medium Roast (₱405)</option>
-        <option value="amai-honey">Amai Manabilang - Honey Medium Roast (₱405)</option>
-        <option value="mtapo-honey">Mt. Apo Honey - Light Roast (₱405)</option>
-      </select>
+<div id="creditCardField" class="hidden">
+  <label for="creditAmount">Enter Payment Amount (₱):</label>
+  <input type="number" id="creditAmount" placeholder="e.g., 500" />
+</div>
 
-      <!-- PAYMENT METHOD SELECTION -->
+<label for="deliveryOption">Pickup or Delivery:</label>
+<select id="deliveryOption" required>
+  <option value="" disabled selected>Select option</option>
+  <option value="pickup">Pickup</option>
+  <option value="delivery">Delivery</option>
+</select>
 
-      <label for="payment">Payment Method:</label>
-      <select id="payment" required>
-        <option value="" disabled selected>Select payment method</option>
-        <option value="cash">Cash</option>
-        <option value="credit">Credit Card</option>
-      </select>
+<label for="name">Your Name:</label>
+<input type="text" id="name" required />
 
-
-      <!-- CREDIT CARD AMOUNT FIELD -->
-
-      <div id="creditCardField" class="hidden">
-        <label for="creditAmount">Enter Payment Amount (₱):</label>
-        <input type="number" id="creditAmount" placeholder="e.g., 500" />
-      </div>
-
-      <!-- PICKUP OR DELIVERY OPTION -->
-
-      <label for="deliveryOption">Pickup or Delivery:</label>
-      <select id="deliveryOption" required>
-        <option value="" disabled selected>Select option</option>
-        <option value="pickup">Pickup</option>
-        <option value="delivery">Delivery</option>
-      </select>
-
-      <!-- USER NAME AND EMAIL -->
-
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" required />
-
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" required />
-
-
-      <!-- DELIVERY ADDRESS -->
+<label for="email">Your Email:</label>
+<input type="email" id="email" required />
 
       <div id="deliveryDetails" class="hidden">
         <label for="address">Delivery Address:</label>
         <textarea id="address" placeholder="Enter your delivery address"></textarea>
       </div>
-
-      <!-- FORM BUTTONS -->
 
       <button type="submit" class="send-btn">Submit Order</button>
       <button type="button" class="close-btn" id="closeOrderModal">Cancel</button>
@@ -150,9 +120,6 @@
     </form>
   </div>
 </div>
-
-
-<!-- CUSTOM POPUP ALERT BOX -->
 
 <div class="popup-alert hidden" id="popupAlert">
   <div class="popup-content">
@@ -162,28 +129,28 @@
   </div>
 </div>
 
+<section class="faq" id="faq">
+  <h2>Frequently Asked Questions</h2>
 
-  <!-- FAQ SECTION -->
-
-  <section class="faq" id="faq">
-    <h2>Frequently Asked Questions</h2>
+  <div class="faq-items">
     <div class="faq-item">Where do you source your coffee beans from?</div>
     <div class="faq-item">Is your coffee fair-trade certified?</div>
     <div class="faq-item">Can I pay online for my orders?</div>
-    <a href="help-center.html" class="help-btn">Help Center</a>
-  </section>
+  </div>
 
+  <a href="help-center.html" class="help-btn">Help Center</a>
+</section>
 
-  <!-- CONTACT US SECTION -->
+  <h2 class="contact-heading">Contact Us</h2>
 
   <section class="contact" id="contact">
-    <h2>Contact Us</h2>
+    
     <div class="contact-info">
-      <p><strong>Location:</strong> City, Davao Region 8000, Philippines</p>
-      <p><strong>Phone:</strong> (082) 226 0079</p>
-      <p><strong>Email:</strong> info@coffeeforpeace.com</p>
-      <p><strong>Operating Hours:</strong><br>
-        Monday to Saturday – 9:00 AM to 9:00 PM<br>
+      <p><strong>Location: </strong> City, Davao Region 8000, Philippines</p>
+      <p><strong>Phone: </strong> (082) 226 0079</p>
+      <p><strong>Email: </strong> info@coffeeforpeace.com</p>
+      <p><strong>Operating Hours: </strong><br>
+        Monday to Saturday – 9:00AM to 9:00PM<br>
         Sunday – Closed
       </p>
     </div>
@@ -194,8 +161,6 @@
       <button type="submit" class="send-btn">Send Message</button>
     </form>
   </section>
-
-  <!-- FOOTER SECTION -->
 
   <footer class="footer">
     © 2025 Coffee For Peace

@@ -1,8 +1,4 @@
-
-/*DOM CONTENT LOADED HANDLER*/ 
 document.addEventListener("DOMContentLoaded", () => {
-
- /*CONTACT FORM SUBMISSION*/
   const contactForm = document.querySelector(".contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", (e) => {
@@ -11,9 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
       contactForm.reset();
     });
   }
-
- 
-  /*ORDER FORM MODAL*/
 
   const orderBtn = document.getElementById("orderBtn");                  
   const orderModal = document.getElementById("orderModal");              
@@ -28,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const productSelect = document.getElementById("product");            
 
-  /*PRODUCT PRICE MAP*/
   const productPrices = {
     "marilog-natural": 305,
     "calinan-robusta": 305,
@@ -37,8 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "amai-honey": 405,
     "mtapo-honey": 405
   };
-
-  /*CUSTOM POPUP ALERT*/
 
   const popupAlert = document.getElementById("popupAlert");              
   const popupMessage = document.getElementById("popupMessage");          
@@ -56,20 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
     popupAlert.classList.add("hidden");
   });
 
-  /*SHOW MODAL ON "ORDER NOW"*/
-
   orderBtn.addEventListener("click", () => {
     orderModal.classList.remove("hidden");
   });
 
-
-  /*CLOSE MODAL ON "CANCEL"*/
-
   closeOrderModal.addEventListener("click", () => {
     orderModal.classList.add("hidden");
   });
-
-  /*TOGGLE DELIVERY ADDRESS FIELD*/ 
 
   deliveryOption.addEventListener("change", () => {
     if (deliveryOption.value === "delivery") {
@@ -79,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /*TOGGLE CREDIT CARD FIELD*/
   paymentMethod.addEventListener("change", () => {
     if (paymentMethod.value === "credit") {
       creditCardField.classList.remove("hidden");
@@ -87,8 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
       creditCardField.classList.add("hidden");
     }
   });
-
-  /*ORDER FORM SUBMISSION WITH VALIDATION*/ 
   
   orderForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -119,8 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    /*BUILD RECEIPT MESSAGE*/
-
     const userName = document.getElementById("name").value.trim();
     const userEmail = document.getElementById("email").value.trim();
     const deliveryType = deliveryOption.value;
@@ -142,11 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     receiptHTML += `<hr style="margin: 1rem 0;"><p> <em>Your order has been submitted! We'll contact you shortly.</em></p>`;
 
-    /*SHOW RECEIPT POPUP*/
-
     showPopup("", receiptHTML);
-
-    /**CLOSE ORDER MODAL*/
 
     orderModal.classList.add("hidden");
 
@@ -154,8 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
     deliveryDetails.classList.add("hidden");
     creditCardField.classList.add("hidden");
   });
-
-  /*CLOSE MODAL IF CLICKED OUTSIDE FORM*/
 
   orderModal.addEventListener("click", (e) => {
     if (e.target === orderModal) {
